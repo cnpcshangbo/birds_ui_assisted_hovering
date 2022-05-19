@@ -30,6 +30,12 @@ private slots:
 
     void on_pushButton_distance2serial_clicked();
 
+    void on_keyboard_clicked();
+
+    void on_setpoint_clicked();
+
+    void on_pid_clicked();
+
 private:
     Ui::Widget *ui;
 };
