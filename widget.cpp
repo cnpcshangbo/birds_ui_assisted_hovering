@@ -93,4 +93,41 @@ void Widget::on_pushButton_distance2serial_clicked()
     cout << Cmd << endl;
     system(Cmd.c_str());
 }
+/////////////////////////////////////keyboard module////////////////////////////////////////////////////////////
+
+void Widget::on_pushButton_keyboard_clicked()
+{
+    cout << "clicked." << endl;
+    string cmdStart("gnome-terminal -x bash -c \". ~/catkin_ws/devel/setup.bash; . ~/bash/teleop_twist_keyboard.bash");
+//    string viconIP(ui->lineEdit_vicon->text().toStdString());
+    string cmdEnd("; echo Finished . ~/teleop_twist_keyboard.bash; bash\"");
+    string Cmd = cmdStart + cmdEnd;
+    cout << Cmd << endl;
+    system(Cmd.c_str());
+}
+
+
+void Widget::on_pushButton_setpoint_clicked()
+{
+    cout << "clicked." << endl;
+    string cmdStart("gnome-terminal -x bash -c \". ~/catkin_ws/devel/setup.bash; . ~/bash/birds_setpoint.bash");
+//    string viconIP(ui->lineEdit_vicon->text().toStdString());
+    string cmdEnd("; echo Finished . ~/birds_setpoint.bash; bash\"");
+    string Cmd = cmdStart + cmdEnd;
+    cout << Cmd << endl;
+    system(Cmd.c_str());
+}
+
+
+void Widget::on_pushButton_pid_clicked()
+{
+    cout << "clicked." << endl;
+    string cmdStart("gnome-terminal -x bash -c \". ~/catkin_ws/devel/setup.bash; . ~/bash/pid_drill.bash");
+//    string viconIP(ui->lineEdit_vicon->text().toStdString());
+    string cmdEnd("; echo Finished . ~/pid_drill.bash; bash\"");
+    string Cmd = cmdStart + cmdEnd;
+    cout << Cmd << endl;
+    system(Cmd.c_str());
+}
+
 
